@@ -5,6 +5,15 @@ import { uploadImage } from "@/libs/uploadImage";
 import formidable from "formidable";
 import db from "@/libs/mongo";
 
+import Cors from 'cors'
+
+// Initialize the CORS middleware
+const cors = Cors({
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    origin: ['https://next-page-r9ehp6mg9-ujwal-suwals-projects.vercel.app', 'https://next-page-peach.vercel.app'],
+    credentials: true,
+})
+
 export const config = {
     api: {
         bodyParser: false,

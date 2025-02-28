@@ -3,6 +3,15 @@ import bcrypt from "bcryptjs";
 import { User } from "@/model/userModel";
 import db from "@/libs/mongo";
 
+import Cors from 'cors'
+
+// Initialize the CORS middleware
+const cors = Cors({
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    origin: ['https://next-page-r9ehp6mg9-ujwal-suwals-projects.vercel.app', 'https://next-page-peach.vercel.app'],
+    credentials: true,
+})
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method !== 'POST') {
         return res.status(405).json({ message: 'Method not allowed' });
