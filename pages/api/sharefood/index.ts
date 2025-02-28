@@ -9,7 +9,7 @@ import Cors from 'cors'
 
 const cors = Cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  origin: ['https://pageauth-p4uh46yoa-ujwal-suwals-projects.vercel.app/', 'https://next-page-peach.vercel.app'],
+  origin: ['https://pageauth-p4uh46yoa-ujwal-suwals-projects.vercel.app/', 'https://pageauth.vercel.app/'],
   credentials: true,
 })
 
