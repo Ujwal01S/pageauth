@@ -12,6 +12,7 @@ import { showErrorToast, showSuccessToast } from "@/lib/toast";
 import { signIn } from "next-auth/react";
 
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function LoginForm() {
   const router = useRouter();
@@ -60,6 +61,12 @@ export default function LoginForm() {
           <div className="w-full flex justify-center mt-4">
             <SubmitButton isSubmitting={isSubmitting} name="Login" />
           </div>
+          <p>
+            No account ?{" "}
+            <Link href="/register" className="font-bold">
+              Register
+            </Link>
+          </p>
         </form>
       </Form>
     </div>
