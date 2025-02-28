@@ -8,10 +8,9 @@ import Cors from 'cors'
 // Initialize the CORS middleware
 const cors = Cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    origin: ['https://next-page-r9ehp6mg9-ujwal-suwals-projects.vercel.app', 'https://next-page-peach.vercel.app'],
+    origin: ['https://pageauth-p4uh46yoa-ujwal-suwals-projects.vercel.app/', 'https://next-page-peach.vercel.app'],
     credentials: true,
 })
-
 export const config = {
     api: {
         bodyParser: false,
